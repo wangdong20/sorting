@@ -237,7 +237,9 @@ public class Driver {
 //			}
 //		}
 		
-		for(int i = 0; i < array.length; i++) {
+		// it should from the last number in array to the first
+		// otherwise, we may break the order if there are many same numbers in the array
+		for(int i = array.length - 1; i >= 0 ; i--) {
 			output[count[array[i]] - 1] = array[i];
 			count[array[i]]--;
 		}
